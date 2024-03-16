@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const ChallengeOne = () => {
   const transitionVariant = {
     duration: 1.1,
-    delay: 0.2,
+    delay: 0.1,
     ease: "linear",
     times: [0, 0.5, 1],
   };
@@ -30,7 +30,9 @@ const ChallengeOne = () => {
       <motion.button
         className="py-4 px-6 mt-4 rounded-lg bg-gray-900"
         animate={{ opacity: [0, 0, 1], y: [40, 40, 0] }}
-        transition={{ ...transitionVariant }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={transitionVariant}
       >
         Explore Now
       </motion.button>
