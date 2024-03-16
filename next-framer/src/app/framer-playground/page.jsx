@@ -1,10 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
+import React, { useRef, useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useAnimationControls,
+  useInView,
+} from "framer-motion";
 
 const FramerPlayGround = () => {
   const rotateControls = useAnimationControls();
+
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: true,
+  });
+
+  console.log(isInView);
 
   const [isVisible, setIsVisible] = useState(true);
 
@@ -19,7 +32,8 @@ const FramerPlayGround = () => {
   };
 
   return (
-    <div className="min-h-screen bg-red-200 flex justify-center items-center flex-col gap-8 py-8">
+    // <div className="min-h-screen bg-red-200 flex justify-center items-center flex-col gap-8 py-8">
+    <>
       {/* Basic of motion and AnimatePresence */}
       {/* <motion.button
         className="bg-black text-white px-4 py-2 rounded-lg"
@@ -43,9 +57,8 @@ const FramerPlayGround = () => {
           />
         )}
       </AnimatePresence> */}
-
       {/* useAnimationControls */}
-      <motion.button
+      {/* <motion.button
         className="bg-black text-white px-4 py-2 rounded-lg"
         onClick={handleClickRotate}
       >
@@ -68,8 +81,24 @@ const FramerPlayGround = () => {
           duration: 0.8,
           ease: "easeInOut",
         }}
+      /> */}
+
+      {/* View based animations */}
+
+      <div className="min-h-[150vh] bg-red-400"></div>
+      <motion.div
+        className="min-h-screen bg-black"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       />
-    </div>
+      <div
+        ref={ref}
+        className={`min-h-screen ${
+          isInView ? "bg-blue-600" : "bg-red-600"
+        } transition-colors duration-100`}
+      />
+    </>
   );
 };
 
