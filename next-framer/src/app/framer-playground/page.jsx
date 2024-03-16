@@ -1,20 +1,39 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FramerPlayGround = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Transform values are applied in a specific order: translate, scale, rotate, skew. However, you can customize this default order using the transormTemplate prop
+  function template({ rotate, x }) {
+    return `rotate(${rotate}) translateX(${x})`;
+  }
+
   return (
-    <div
-      className="min-h-screen flex justify-center items-center"
-      style={{ perspective: "60rem" }}
-    >
-      <motion.div
-        className="bg-red-400 h-48 aspect-square"
-        initial={{ scale: 1, translateX: "-1100px" }}
-        animate={{ scale: 1.9, translateX: "200px", rotateY: "180deg" }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-      ></motion.div>
+    <div className="min-h-screen bg-red-200 flex justify-center items-center flex-col gap-8 py-8">
+      <motion.button
+        className="bg-black text-white px-4 py-2 rounded-lg"
+        onClick={() => setIsVisible(!isVisible)}
+        layout
+      >
+        Toggle Box
+      </motion.button>
+      <AnimatePresence mode="popLayout">
+        {isVisible && (
+          <motion.div
+            className="bg-blue-400 mx-auto w-80 aspect-square rounded-lg"
+            initial={{ rotate: "0deg" }}
+            animate={{ rotate: "180deg" }}
+            exit={{ rotate: "-180deg" }}
+            transition={{
+              duration: 1,
+              type: "spring",
+            }}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
