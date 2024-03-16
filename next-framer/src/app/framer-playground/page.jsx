@@ -24,12 +24,13 @@ const FramerPlayGround = () => {
         {isVisible && (
           <motion.div
             className="bg-blue-400 mx-auto w-80 aspect-square rounded-lg"
-            initial={{ rotate: "0deg" }}
-            animate={{ rotate: "180deg" }}
-            exit={{ rotate: "-180deg" }}
+            initial={{ y: 0 }}
+            animate={{ y: [0, 150, 200, 200, 10] }}
+            exit={{ scale: 1.1 }}
             transition={{
-              duration: 1,
-              type: "spring",
+              duration: 2,
+              ease: "easeIn",
+              times: [0, 0.25, 0.5, 1],
             }}
           />
         )}
