@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Anek_Bangla } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const anekBangla = Anek_Bangla({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Framer Motion R&D",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={anekBangla.className}>
         <Navbar />
 
         <div className="h-[calc(100vh - 6rem)]">{children}</div>
