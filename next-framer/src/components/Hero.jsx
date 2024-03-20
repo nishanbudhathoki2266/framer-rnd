@@ -15,8 +15,10 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="min-h-[300vh] bg-gray-400">
-      {/* <Image src="/assets/hero.png" fill objectFit="cover" /> */}
+    <div className="min-h-screen flex justify-center items-end bg-gradient-to-br from-zinc-400 to-slate-200">
+      <div className="relative w-full aspect-square">
+        <Image src="/assets/hero.png" quality={100} fill objectFit="contain" />
+      </div>
     </div>
   );
 };
