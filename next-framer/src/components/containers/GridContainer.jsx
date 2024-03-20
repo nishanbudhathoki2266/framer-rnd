@@ -1,3 +1,5 @@
+"use client";
+
 const GridContainer = ({ className = "", children }) => {
   return (
     <div
