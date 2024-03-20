@@ -4,25 +4,39 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionContainer from "./containers/SectionContainer";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaNode, FaReact } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <SectionContainer
       id="hero"
-      className="relative pt-10 flex justify-center bg-gradient-to-br from-zinc-400 to-slate-200"
+      className="pt-10 flex justify-center bg-gradient-to-br from-zinc-400 to-slate-200"
     >
       <motion.div
-        className="relative flex-1 bg-red-200"
+        className="relative flex-1"
         whileInView={{
-          // x: [-50, 0],
+          x: [-100, 0],
           opacity: [0, 1],
           transition: {
-            duration: 0.4,
+            duration: 0.6,
             ease: "easeInOut",
           },
         }}
       >
-        Hello FCK
+        <div className="bg-gray-200 flex justify-center items-center gap-2 py-3 px-4 absolute shadow-xl rounded-md top-1/4 left-1/2">
+          <span className="text-3xl">👋</span>
+          <div className="flex flex-col justify-center items-start">
+            <span className="text-sm text-black/60">Hello, I am </span>
+            <span className="text-5xl font-semibold tracking-wide">Nishan</span>
+          </div>
+        </div>
+
+        <div className="bg-gray-200 flex justify-center items-center gap-2 py-3 px-4 absolute shadow-xl rounded-md top-1/2 left-2/3">
+          <span className="text-md text-black/60 uppercase">
+            Software Engineer
+          </span>
+        </div>
       </motion.div>
       <motion.div
         className="relative flex-[2] lg:flex-1 aspect-square"
@@ -30,7 +44,7 @@ const Hero = () => {
           // x: [-50, 0],
           opacity: [0, 1],
           transition: {
-            duration: 0.4,
+            duration: 0.6,
             ease: "easeInOut",
           },
         }}
@@ -44,17 +58,24 @@ const Hero = () => {
         />
       </motion.div>
       <motion.div
-        className="relative flex-1 bg-red-200"
         whileInView={{
-          // x: [-50, 0],
-          opacity: [0, 1],
+          scale: [0.1, 1],
           transition: {
-            duration: 0.4,
+            duration: 0.8,
             ease: "easeInOut",
           },
         }}
+        className="relative flex-1"
       >
-        Hello FCK
+        <span className="-left-32 bg-gray-200 p-4 rounded-full absolute shadow-xl top-8">
+          <FaReact size={50} className="text-blue-400" />
+        </span>
+        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl top-1/3">
+          <TbBrandNextjs size={80} className="text-black/70" />
+        </span>
+        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl top-3/4">
+          <FaNode size={60} className="text-green-700" />
+        </span>
       </motion.div>
     </SectionContainer>
   );
