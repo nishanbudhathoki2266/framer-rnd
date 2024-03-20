@@ -6,12 +6,13 @@ import Image from "next/image";
 import SectionContainer from "./containers/SectionContainer";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaNode, FaReact } from "react-icons/fa";
+import { LuMouse } from "react-icons/lu";
 
 const Hero = () => {
   return (
     <SectionContainer
       id="hero"
-      className="pt-10 flex justify-center bg-gradient-to-br from-zinc-400 to-slate-200"
+      className="pt-10 relative flex justify-center bg-gradient-to-br from-zinc-400 to-slate-200"
     >
       <motion.div
         className="relative flex-1"
@@ -41,7 +42,6 @@ const Hero = () => {
       <motion.div
         className="relative flex-[2] lg:flex-1 aspect-square"
         whileInView={{
-          // x: [-50, 0],
           opacity: [0, 1],
           transition: {
             duration: 0.6,
@@ -61,22 +61,38 @@ const Hero = () => {
         whileInView={{
           scale: [0.1, 1],
           transition: {
-            duration: 0.8,
+            duration: 0.9,
             ease: "easeInOut",
           },
         }}
         className="relative flex-1"
       >
-        <span className="-left-32 bg-gray-200 p-4 rounded-full absolute shadow-xl top-8">
+        <span className="-left-32 bg-gray-200 p-4 rounded-full absolute shadow-xl hover:scale-105 transition-all top-8">
           <FaReact size={50} className="text-blue-400" />
         </span>
-        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl top-1/3">
+        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl hover:scale-105 transition-all top-1/3">
           <TbBrandNextjs size={80} className="text-black/70" />
         </span>
-        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl top-3/4">
+        <span className="-left-16 bg-gray-200 p-4 rounded-full absolute shadow-xl hover:scale-105 transition-all top-3/4">
           <FaNode size={60} className="text-green-700" />
         </span>
       </motion.div>
+
+      {/* Mouse scroll  */}
+      <motion.span
+        className="absolute left-1/3 bottom-4"
+        animate={{
+          bottom: ["20px", "4px"],
+          opacity: [1, 0.1],
+        }}
+        transition={{
+          duration: 1.3,
+          ease: "easeInOut",
+          repeat: Infinity,
+        }}
+      >
+        <LuMouse size={40} />
+      </motion.span>
     </SectionContainer>
   );
 };
