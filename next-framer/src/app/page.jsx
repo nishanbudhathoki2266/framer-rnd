@@ -2,9 +2,9 @@ import Hero from "@/components/Hero";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-slate-200">
+    <main className="min-h-[300dvh] bg-slate-200">
       <Hero />
-    </div>
+    </main>
   );
 };
 
