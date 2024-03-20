@@ -16,8 +16,8 @@ import { RiAccountPinBoxFill } from "react-icons/ri";
 import { MdWork } from "react-icons/md";
 
 const navItems = [
-  { name: "Home", link: "/", icon: <FaHome /> },
-  { name: "About", link: "/", icon: <RiAccountPinBoxFill /> },
+  { name: "Home", link: "#hero", icon: <FaHome /> },
+  { name: "About", link: "#about", icon: <RiAccountPinBoxFill /> },
   { name: "Portfolio", link: "/", icon: <MdWork /> },
 ];
 
