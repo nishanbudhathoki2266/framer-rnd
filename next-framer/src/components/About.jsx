@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import SectionContainer from "./containers/SectionContainer";
 import { motion, useInView } from "framer-motion";
 import Container from "./containers/Container";
@@ -8,11 +8,13 @@ import styles from "./About.module.css";
 import SkillCard from "./SkillCard";
 import { LuMouse } from "react-icons/lu";
 
-const AboutPage = () => {
+const About = () => {
   const skillsRef = useRef(null);
   const aboutRef = useRef(null);
 
   const isSKillsDivInView = useInView(skillsRef);
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <SectionContainer id="about" className="py-20 flex justify-center">
@@ -42,9 +44,13 @@ const AboutPage = () => {
             await, and I'm here to explore and create. Let's build the future
             together!
           </p>
+
+          {/* Skills */}
           <div
             className={`w-full flex flex-col gap-2 transition-all delay-100 duration-200 ${
-              isSKillsDivInView ? "translate-x-0" : "-translate-x-40"
+              isSKillsDivInView
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-40 opacity-0"
             }`}
             ref={skillsRef}
           >
@@ -85,6 +91,7 @@ const AboutPage = () => {
                 <SkillCard key={skill} skill={skill} />
               ))}
             </div>
+
             {/* Mouse scroll  */}
             <motion.span
               className="mt-6"
@@ -107,4 +114,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;
