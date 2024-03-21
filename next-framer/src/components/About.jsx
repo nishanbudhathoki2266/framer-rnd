@@ -6,14 +6,13 @@ import { motion, useInView } from "framer-motion";
 import Container from "./containers/Container";
 import styles from "./About.module.css";
 import SkillCard from "./SkillCard";
+import { LuMouse } from "react-icons/lu";
 
 const AboutPage = () => {
   const skillsRef = useRef(null);
   const aboutRef = useRef(null);
 
   const isSKillsDivInView = useInView(skillsRef);
-  const isAboutSectionInView = useInView(aboutRef);
-  console.log(isAboutSectionInView);
 
   return (
     <SectionContainer id="about" className="py-20 flex justify-center">
@@ -86,6 +85,21 @@ const AboutPage = () => {
                 <SkillCard key={skill} skill={skill} />
               ))}
             </div>
+            {/* Mouse scroll  */}
+            <motion.span
+              className="mt-6"
+              animate={{
+                y: [-20, 0],
+                opacity: [0, 0.8],
+              }}
+              transition={{
+                duration: 0.9,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
+            >
+              <LuMouse size={40} />
+            </motion.span>
           </div>
         </motion.div>
       </Container>

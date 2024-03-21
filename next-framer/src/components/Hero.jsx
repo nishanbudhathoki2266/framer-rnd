@@ -6,7 +6,6 @@ import Image from "next/image";
 import SectionContainer from "./containers/SectionContainer";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaNode, FaReact } from "react-icons/fa";
-import { LuMouse } from "react-icons/lu";
 
 const Hero = () => {
   return (
@@ -77,22 +76,6 @@ const Hero = () => {
           <FaNode size={60} className="text-green-700" />
         </span>
       </motion.div>
-
-      {/* Mouse scroll  */}
-      <motion.span
-        className="absolute left-1/3 bottom-4"
-        animate={{
-          bottom: ["20px", "4px"],
-          opacity: [1, 0.1],
-        }}
-        transition={{
-          duration: 1.3,
-          ease: "easeInOut",
-          repeat: Infinity,
-        }}
-      >
-        <LuMouse size={40} />
-      </motion.span>
     </SectionContainer>
   );
 };
