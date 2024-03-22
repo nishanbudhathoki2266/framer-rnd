@@ -1,6 +1,5 @@
 import { Anek_Bangla } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const anekBangla = Anek_Bangla({ subsets: ["latin"] });
 
@@ -13,9 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={anekBangla.className}>
-        <Navbar />
-
-        <div className="h-[calc(100vh - 6rem)]">{children}</div>
+        <main>{children}</main>
       </body>
     </html>
   );
