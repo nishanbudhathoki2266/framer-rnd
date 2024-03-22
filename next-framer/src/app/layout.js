@@ -1,7 +1,7 @@
-import { Anek_Bangla } from "next/font/google";
+import { Anek_Bangla, Exo } from "next/font/google";
 import "./globals.css";
 
-const anekBangla = Anek_Bangla({ subsets: ["latin"] });
+const exo = Exo({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Framer Motion R&D",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={anekBangla.className}>
+      <body className={exo.className}>
         <main>{children}</main>
       </body>
     </html>
