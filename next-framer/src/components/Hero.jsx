@@ -44,15 +44,15 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
   return (
     <>
       <div
         id="hero"
-        className="min-h-[120vh] flex justify-center items-center relative"
+        className="min-h-[120vh] bg-red-200 flex justify-center items-center relative"
         ref={ref}
       >
         <motion.h4
@@ -122,7 +122,7 @@ const Hero = () => {
       {/* About section */}
       <motion.div
         style={{ y: shutterY }}
-        className="pt-8 flex justify-center items-center px-2 pb-20 w-full bg-black relative z-30"
+        className="flex justify-center items-center px-2 w-full bg-black pt-36 pb-96 relative z-30"
       >
         {/* Location */}
         <p className="absolute -top-8 text-white flex justify-center items-center px-2 py-1 gap-2 before:bg-black/75 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
@@ -142,7 +142,7 @@ const Hero = () => {
           <span className="text-sm">26°41'58.3"N, 87°17'23.9"E</span>
         </p>
 
-        <Container className="text-center pt-32 pb-52">
+        <Container className="text-center">
           <GridContainer
             whileInView={{
               opacity: [0, 1],
