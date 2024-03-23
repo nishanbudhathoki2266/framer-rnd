@@ -11,64 +11,63 @@ const works = [
     src: "/assets/showcase-5.png",
     alt: "Rowan on horse",
     title: "Rowan on horse",
-    description: "Taken at a race competition that was held during Tihar.",
+    description: "Race held during Tihar.",
   },
   {
     id: 6,
     src: "/assets/showcase-6.png",
     alt: "Keshav dai's seminar",
     title: "Keshav dai's seminar",
-    description:
-      "Taken while attending kd's seminar on today's software industry.",
+    description: "Seminar on Software Development",
   },
   {
     id: 7,
     src: "/assets/showcase-7.png",
     alt: "Suraj in uniform",
     title: "Suraj in uniform",
-    description: "Clicked on Suraj's promotion to Lieutenant.",
+    description: "Promoted to Lieutenant.",
   },
   {
     id: 8,
     src: "/assets/showcase-8.png",
     alt: "Dr. Sunil",
     title: "Dr. Sunil",
-    description: "Was taken at an awareness program held on BPKHIS.",
+    description: "Awareness programme held on BPKHIS.",
   },
   {
     id: 9,
     src: "/assets/showcase-9.jpg",
     alt: "Nishan on set",
     title: "Nishan on set",
-    description: "Taken on the set of one of the Nishan's plays.",
+    description: "Ready for the next ep.",
   },
   {
     id: 10,
     src: "/assets/showcase-10.jpg",
     alt: "Durbar's friday night",
     title: "Durbar's friday night",
-    description: "Taken on Durbar when Sabin Rai was playing.",
+    description: "Holi night on Durbar.",
   },
   {
     id: 2,
     src: "/assets/showcase-2.jpg",
     alt: "Showcase two",
     title: "Into the woods (Abhi)",
-    description: "Taken during a ride of Abhi and Me to charkose jhadi.",
+    description: "Ride to charkose jhadi.",
   },
   {
     id: 3,
     src: "/assets/showcase-3.jpg",
     alt: "Showcase three",
     title: "Siddhika's wedding",
-    description: "Pre-wedding ceremony of Subash & Siddhika.",
+    description: "Pre-wedding ceremony.",
   },
   {
     id: 4,
     src: "/assets/showcase-4.jpg",
     alt: "Showcase four",
     title: "Neha's glow",
-    description: "Taken on the set of NishOnWheels ep 1.",
+    description: "Set of NishOnWheels ep 1.",
   },
 ];
 
@@ -85,7 +84,10 @@ const Portfolio = () => {
         My Works
       </div>
       <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-        <motion.div style={{ x: translateX }} className="flex items-center">
+        <motion.div
+          style={{ x: translateX }}
+          className="flex items-stretch gap-8"
+        >
           {works.map((item) => (
             <div
               className="h-screen w-screen flex items-center justify-center"
