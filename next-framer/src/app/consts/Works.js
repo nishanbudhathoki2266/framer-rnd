@@ -42,6 +42,13 @@ const works = [
     description: "Holi night on Durbar.",
   },
   {
+    id: 1,
+    src: "/assets/showcase-1.jpg",
+    alt: "Showcase two",
+    title: "Tom at Asan",
+    description: "Tom walking on the street of Asan.",
+  },
+  {
     id: 2,
     src: "/assets/showcase-2.jpg",
     alt: "Showcase two",
