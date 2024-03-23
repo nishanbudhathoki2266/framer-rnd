@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Container from "./containers/Container";
 import ShowCaseImage from "./ShowCaseImage";
+import GridContainer from "./containers/GridContainer";
 
 const showcaseImages = [
   {
@@ -117,17 +118,19 @@ const About = () => {
         </motion.div>
       </Container>
 
-      <Container className="mt-8 relative flex px-12 justify-center items-center py-20">
-        {" "}
-        {showcaseImages.map((showcase) => (
-          <ShowCaseImage
-            key={showcase.id}
-            src={showcase.src}
-            alt={showcase.alt}
-            className={showcase.className}
-            rotate={showcase.rotate}
-          />
-        ))}
+      <Container>
+        <GridContainer className="py-20 px-12 overflow-hidden">
+          {" "}
+          {showcaseImages.map((showcase) => (
+            <ShowCaseImage
+              key={showcase.id}
+              src={showcase.src}
+              alt={showcase.alt}
+              className={showcase.className}
+              rotate={showcase.rotate}
+            />
+          ))}
+        </GridContainer>
       </Container>
     </>
   );

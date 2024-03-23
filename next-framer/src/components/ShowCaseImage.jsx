@@ -22,7 +22,7 @@ const ShowCaseImage = ({ src, alt, className = "", rotate = 20 }) => {
           ease: "linear",
         },
       }}
-      className={`flex-1 aspect-square relative transition-all hover:z-50 ring-offset-8 ring-white/90 ring-offset-black rounded-md hover:ring-4 ${className}`}
+      className={`col-span-full md:col-span-2 lg:col-span-3 aspect-square relative transition-all hover:z-50 ring-offset-8 ring-white/90 ring-offset-black rounded-md hover:ring-4 ${className}`}
     >
       <Image
         src={src}

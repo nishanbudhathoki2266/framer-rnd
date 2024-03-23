@@ -122,7 +122,7 @@ const Hero = () => {
       {/* About section */}
       <motion.div
         style={{ y: shutterY }}
-        className="flex justify-center items-center px-2 w-full bg-black pt-36 pb-96 relative z-30"
+        className="flex justify-center items-center px-2 w-full bg-black pt-36 pb-36 md:pb-64 relative z-30"
       >
         {/* Location */}
         <p className="absolute -top-8 text-white flex justify-center items-center px-2 py-1 gap-2 before:bg-black/75 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
