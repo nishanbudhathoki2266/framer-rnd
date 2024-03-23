@@ -12,9 +12,9 @@ const About = () => {
           backgroundAttachment: "fixed",
           backgroundImage: `url(/assets/boy-photographer.jpg)`,
           backgroundSize: "cover",
-          backgroundPosition: "right",
+          backgroundPosition: "center",
         }}
-        className="relative min-h-[50dvh] -mt-[80%] md:-mt-[20%]"
+        className="relative min-h-[70dvh] -mt-[80%] md:-mt-[20%]"
       ></div>
       <div className="bg-black py-20">
         <Container>
