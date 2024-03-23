@@ -77,7 +77,7 @@ const Hero = () => {
         style={{ y: shutterY }}
         className="min-h-[200dvh] px-8 w-full bg-black relative z-30"
       >
-        <p className="absolute -top-8 text-white flex justify-center items-center gap-2 before:bg-black/70 before:px-4 before:py-4 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
+        <p className="absolute -top-8 text-white flex justify-center items-center px-2 py-1 gap-2 before:bg-black/70 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
           <motion.span
             animate={{
               rotate: "360deg",
