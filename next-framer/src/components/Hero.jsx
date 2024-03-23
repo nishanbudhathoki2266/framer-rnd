@@ -52,7 +52,7 @@ const Hero = () => {
     <>
       <div
         id="hero"
-        className="min-h-[120vh] bg-red-200 flex justify-center items-center relative"
+        className="min-h-[120vh] flex justify-center items-center relative"
         ref={ref}
       >
         <motion.h4
@@ -80,7 +80,7 @@ const Hero = () => {
           }}
           initial={{ opacity: 0 }}
           style={{ y: textY }}
-          className="font-extrabold text-center text-white uppercase text-7xl md:text-9xl relative z-10 -top-48"
+          className="font-extrabold text-center text-white uppercase text-7xl md:text-9xl relative z-10 -top-28 lg:-top-48"
         >
           Nishan <span className="hidden lg:block">Budhathoki</span>
         </motion.h1>
