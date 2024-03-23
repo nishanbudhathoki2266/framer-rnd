@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useRef } from "react";
-import { FaRegCompass } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import Image from "next/image";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { FaRegCompass } from "react-icons/fa";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -24,6 +25,20 @@ const Hero = () => {
         className="min-h-screen flex justify-center items-center relative"
         ref={ref}
       >
+        <motion.h4
+          whileInView={{
+            marginTop: "2rem",
+            opacity: [0, 1],
+            transition: {
+              duration: 0.4,
+              ease: "easeInOut",
+            },
+          }}
+          className="absolute z-20 self-start opacity-0 text-white font-light uppercase tracking-wider"
+        >
+          Software Engineer
+        </motion.h4>
+
         <motion.h1
           whileInView={{
             opacity: [0, 0.8],
@@ -59,7 +74,7 @@ const Hero = () => {
 
         <motion.div
           style={{ y: backgroundY }}
-          className="h-full w-full z-20 absolute inset-0"
+          className="h-full w-full z-20 absolute inset-0 brightness-90"
         >
           <Image
             src="/assets/model.png"
