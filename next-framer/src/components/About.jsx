@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Container from "./containers/Container";
 import ShowCaseImage from "./ShowCaseImage";
 import GridContainer from "./containers/GridContainer";
+import Link from "next/link";
 
 const showcaseImages = [
   {
@@ -54,7 +55,7 @@ const About = () => {
         <motion.div
           className="text-white/85 text-sm text-justify flex justify-center items-center flex-col gap-2"
           whileInView={{
-            x: ["-50%", 0],
+            y: ["50%", 0],
             opacity: [0, 1],
             transition: {
               duration: 0.4,
@@ -130,6 +131,12 @@ const About = () => {
               rotate={showcase.rotate}
             />
           ))}
+          <Link
+            href="#"
+            className="text-white/80 font-medium text-lg col-span-full text-center mt-12 hover:tracking-wider w-fit mx-auto transition-all hover:text-white/40"
+          >
+            View All →
+          </Link>
         </GridContainer>
       </Container>
     </>
