@@ -24,7 +24,7 @@ const Portfolio = () => {
           opacity: [1, 0.2],
           transition: {
             duration: 1.8,
-            ease: "easeInOut",
+            ease: "linear",
             repeat: Infinity,
           },
         }}
