@@ -52,7 +52,7 @@ const Hero = () => {
     <>
       <div
         id="hero"
-        className="min-h-[150vh] flex justify-center items-center relative"
+        className="min-h-[120vh] flex justify-center items-center relative"
         ref={ref}
       >
         <motion.h4
