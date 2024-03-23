@@ -46,13 +46,13 @@ const Hero = () => {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"]);
+  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
 
   return (
     <>
       <div
         id="hero"
-        className="min-h-[110vh] flex justify-center items-center relative"
+        className="min-h-[150vh] flex justify-center items-center relative"
         ref={ref}
       >
         <motion.h4
@@ -80,7 +80,7 @@ const Hero = () => {
           }}
           initial={{ opacity: 0 }}
           style={{ y: textY }}
-          className="font-extrabold text-center text-white uppercase text-7xl md:text-9xl relative z-10 -top-32"
+          className="font-extrabold text-center text-white uppercase text-7xl md:text-9xl relative z-10 -top-48"
         >
           Nishan <span className="hidden lg:block">Budhathoki</span>
         </motion.h1>
@@ -122,10 +122,10 @@ const Hero = () => {
       {/* About section */}
       <motion.div
         style={{ y: shutterY }}
-        className="pt-8 px-4 pb-20 w-full bg-black relative z-30"
+        className="pt-8 flex justify-center items-center px-2 pb-20 w-full bg-black relative z-30"
       >
         {/* Location */}
-        <p className="absolute -top-8 text-white flex justify-center items-center px-2 py-1 gap-2 before:bg-black/70 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
+        <p className="absolute -top-8 text-white flex justify-center items-center px-2 py-1 gap-2 before:bg-black/75 before:rounded-lg before:w-full before:absolute before:h-full before:-z-20">
           <motion.span
             animate={{
               rotate: "360deg",
