@@ -14,7 +14,11 @@ const Portfolio = () => {
   const translateX = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <div className="container mx-auto min-h-[600dvh] relative" ref={ref}>
+    <div
+      className="container mx-auto min-h-[600dvh] relative"
+      id="portfolio"
+      ref={ref}
+    >
       <div className="flex items-center justify-center text-8xl text-center pt-8 text-white/80">
         My Works
       </div>

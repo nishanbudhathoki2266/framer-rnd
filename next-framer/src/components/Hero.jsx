@@ -20,7 +20,7 @@ const Hero = () => {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+  const shutterY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   return (
     <>
@@ -93,8 +93,9 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* About section */}
+      {/* Services section */}
       <motion.div
+        id="services"
         style={{ y: shutterY }}
         className="flex justify-center items-center px-2 w-full bg-black pt-36 pb-36 md:pb-64 relative z-30"
       >

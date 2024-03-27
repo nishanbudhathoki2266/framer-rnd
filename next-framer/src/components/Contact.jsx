@@ -8,6 +8,7 @@ import React from "react";
 const Contact = () => {
   return (
     <motion.div
+      id="contact"
       whileInView={{
         y: ["50%", 0],
         opacity: [0, 1],
@@ -16,7 +17,7 @@ const Contact = () => {
           ease: "easeInOut",
         },
       }}
-      className="container mx-auto flex flex-col justify-center items-center gap-20 px-4 py-32 text-white/80"
+      className="container mx-auto flex flex-col justify-center items-center gap-20 px-4 py-32 text-white/80 w-fit"
     >
       <div className="flex flex-col gap-1 justify-center items-center">
         <h1 className="text-8xl">Reach Out</h1>

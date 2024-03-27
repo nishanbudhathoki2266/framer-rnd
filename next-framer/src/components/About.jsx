@@ -23,6 +23,7 @@ const About = () => {
 
       <Container className="py-20">
         <motion.div
+          id="about"
           className="text-white/85 text-sm text-justify flex justify-center items-center flex-col gap-2"
           whileInView={{
             y: ["50%", 0],
